@@ -30,4 +30,9 @@ app.delete("/api/movies/:index",function(req, res){
   res.send(movies);
 });
 
+app.post("/api/movies",function(req, res){
+  movies.push(req.body.name);
+  res.send(movies);
+});
+
 app.listen(3000)
