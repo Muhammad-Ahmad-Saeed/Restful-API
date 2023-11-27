@@ -25,4 +25,9 @@ app.put("/api/movies/:index",function(req, res){
   res.send(movies[req.params.index]);
 });
 
+app.delete("/api/movies/:index",function(req, res){
+  movies.splice(req.params.index,1)
+  res.send(movies);
+});
+
 app.listen(3000)
